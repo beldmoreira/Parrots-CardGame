@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+  }
+
+body{
+    background-color:#EEF9BF;
+    font-family:'Roboto', sans-serif;
+    }
+.nome-jogo{
+    height: 63px;
+    width: 540px;
+    left: 285px;
+    top: 40px;
+    margin-top: 40px;
+    color: #75B79E;
+
+}
+@media (max-width:) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
