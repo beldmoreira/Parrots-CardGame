@@ -2,6 +2,14 @@
     box-sizing: border-box;
   }
 
+.container{
+height: 629px;
+width: 1110px;
+left: -746px;
+top: -315px;
+border-radius: 0px;
+}
+
 body{
     background-color:#EEF9BF;
     font-family:'Roboto', sans-serif;
@@ -11,6 +19,8 @@ body{
     width: 540px;
     left: 285px;
     top: 40px;
+    padding-right: 285px; 
+    padding-left: 285px;
     margin-top: 40px;
     color: #75B79E;
 
