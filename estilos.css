@@ -22,18 +22,48 @@ body{
     padding-right: 285px; 
     padding-left: 285px;
     margin-top: 40px;
+    margin-bottom: 13px;
     color: #75B79E;
 }
 .tipografia{
-font-family: Roboto;
-font-size: 56px;
-font-style: normal;
-font-weight: 700;
-line-height: 66px;
-letter-spacing: -0.004em;
-text-align: left;
-
+    font-family: Roboto;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 66px;
+    letter-spacing: -0.004em;
+    text-align: left;
 }
+
+.card{
+height: 146px;
+width: 117px;
+left: 122px;
+top: 150px;
+margin-top: 34px;
+border-radius: 5px;
+margin-right: 122px;
+background-color:#A7E9AF;
+background-image: url(assets\front.png);
+display: flex;
+align-items: center;
+justify-content: center;
+position: absolute;
+backface-visibility: hidden;
+transition: all .5s;
+transform-style: preserve-3d;
+}
+.back-face {
+    transform: rotateY(180deg);
+  }
+
+  .card:hover .back-face {
+    transform: rotateY(0deg);
+  }
+
+  .card:hover .front-face {
+    transform: rotateY(-180deg);
+  }
 @media (max-width:) {
 
 }
