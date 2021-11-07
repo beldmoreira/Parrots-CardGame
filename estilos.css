@@ -3,11 +3,11 @@
   }
 
 .container{
-height: 629px;
-width: 1110px;
-left: -746px;
-top: -315px;
-border-radius: 0px;
+    height: 629px;
+    width: 1110px;
+    left: -746px;
+    top: -315px;
+    border-radius: 0px;
 }
 
 body{
@@ -36,22 +36,25 @@ body{
 }
 
 .card{
-height: 146px;
-width: 117px;
-left: 122px;
-top: 150px;
-margin-top: 34px;
-border-radius: 5px;
-margin-right: 122px;
-background-color:#A7E9AF;
-background-image: url(assets\front.png);
-display: flex;
-align-items: center;
-justify-content: center;
-position: absolute;
-backface-visibility: hidden;
-transition: all .5s;
-transform-style: preserve-3d;
+    height: 146px;
+    width: 117px;
+    left: 122px;
+    top: 150px;
+    margin-top: 34px;
+    border-radius: 5px;
+    margin-right: 122px;
+    background-color:#A7E9AF;
+    background-image: url(assets\front.png);
+    position: relative;
+}
+.face{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all .5s;
+    transform-style: preserve-3d;
 }
 .back-face {
     transform: rotateY(180deg);
