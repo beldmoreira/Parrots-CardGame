@@ -3,11 +3,11 @@
   }
 
 .container{
-    height: 629px;
-    width: 1110px;
-    left: -746px;
-    top: -315px;
-    border-radius: 0px;
+    display: flex;
+    justify-content: center;
+    padding-left:122px;
+    padding-right:116px;
+
 }
 
 body{
@@ -42,9 +42,8 @@ body{
     top: 150px;
     margin-top: 34px;
     border-radius: 5px;
-    margin-right: 122px;
+    margin-left: 34px;
     background-color:#A7E9AF;
-    background-image: url(assets\front.png);
     position: relative;
 }
 .face{
@@ -66,6 +65,22 @@ body{
 
   .card:hover .front-face {
     transform: rotateY(-180deg);
+  }
+
+  .front{
+    height: 100px;
+    width: 100px;
+    left: 132px;
+    top: 174px;
+    margin-top: 24px;
+    margin-left:10px;
+    border-radius: 0px;
+
+  }
+
+  .back{
+    display:flex;
+    align-items:center;
   }
 @media (max-width:) {
 
