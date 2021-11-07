@@ -4,9 +4,10 @@
 
 .container{
     display: flex;
-    justify-content: center;
-    padding-left:122px;
-    padding-right:116px;
+    flex-wrap:wrap;
+    justify-content: space-between ;
+    margin-right:122px;
+    margin-left:116px;
 
 }
 
@@ -16,11 +17,7 @@ body{
     }
 .nome-jogo{
     height: 63px;
-    width: 540px;
-    left: 285px;
     top: 40px;
-    padding-right: 285px; 
-    padding-left: 285px;
     margin-top: 40px;
     margin-bottom: 13px;
     color: #75B79E;
@@ -32,14 +29,12 @@ body{
     font-weight: 700;
     line-height: 66px;
     letter-spacing: -0.004em;
-    text-align: left;
+    text-align: center;
 }
 
 .card{
     height: 146px;
     width: 117px;
-    left: 122px;
-    top: 150px;
     margin-top: 34px;
     border-radius: 5px;
     margin-left: 34px;
