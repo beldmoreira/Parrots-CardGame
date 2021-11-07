@@ -10,10 +10,17 @@ function iniciarJogo(){
     item.remove()
   } 
  }
- 
- // Embaralhá-las
- // Dispor a quantidade escolhida
+ let cartas = document.querySelectorAll(".container > .card")
+ let cartasArray=Array.from(cartas)
+ cartasArray.sort(comparador);
+ let container = document.querySelector(".container")
+ for (var item of cartasArray) {
+   container.appendChild(item)
+ }
+} 
 
+function comparador() { 
+	return Math.random() - 0.5; 
 }
 
 function selecionarNumero(){
@@ -29,14 +36,13 @@ function selecionarNumero(){
     return parseInt(numeroCartas)
 }
 
+
 //function virarCarta(){
     // Inicialmente, as cartas devem estar viradas para baixo
 
     // 
 //}
 
-function comparador() { 
-	return Math.random() - 0.5; 
-}
-//minhaArray.sort(comparador);
+
+
 iniciarJogo()
