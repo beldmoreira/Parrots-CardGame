@@ -73,7 +73,10 @@ function clicarCarta(card) {
                   function(){
                       alert(`Você ganhou em ${contadorDeCliques} jogadas!`)
                     },1000
-                ) 
+                )
+                let reiniciar = prompt("Você gostaria de reiniciar a partida? Digite sim ou não" )
+                if (reiniciar == "sim")
+                location.reload(true); 
             }
 
         } else{
