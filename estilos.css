@@ -54,11 +54,11 @@ body{
     transform: rotateY(180deg);
   }
 
-  .card:hover .back-face {
+  .card.virado > .back-face {
     transform: rotateY(0deg);
   }
 
-  .card:hover .front-face {
+  .card.virado > .front-face {
     transform: rotateY(-180deg);
   }
 
