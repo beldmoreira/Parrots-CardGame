@@ -1,12 +1,15 @@
 const numeroMaximo = 14
 let primeiraCarta= null
 let processandoClique =false
-
+const classCartas = ["rock","unicornio","bob","fiesta","papagaioPescoço","trigemios","marinheiro"]
+let paresEncontrados= 0
+let paresDisponiveis = 0
+let contadorDeCliques=0
 
 function iniciarJogo(){
     let numeroCartas= selecionarNumero()
-    const classCartas = ["rock","unicornio","bob","fiesta","papagaioPescoço","trigemios","marinheiro"]
     let remocaoPares = (numeroMaximo-numeroCartas)/2
+    paresDisponiveis= (numeroCartas/2)
     for(let i=0;i< remocaoPares;i++){
     const lista = document.querySelectorAll(`.${classCartas[i]}`) 
     for (var item of lista) {
@@ -40,37 +43,56 @@ function selecionarNumero(){
 }
 
 function clicarCarta(card) {
+
+    if(card.classList.contains("virado"))
+        return
     if(processandoClique){
        return 
     }
     if(card== primeiraCarta)
         return
     processandoClique= true
-
+    contadorDeCliques++
     if (primeiraCarta == null){
         primeiraCarta = card
         processandoClique = false;
 
     }
     else {
-        let tipoPrimeiraCarta = document.querySelectorAll("")
-        let =Array.from()
-        card.classList.contains();
-        //Checagem se a carta é o par
-        //se não for o par, virar as duas com intervalo de 1s
-        //se for par, deixar as duas viradas
-        //setInterval(function, 1000);      
-    }
+        let tipoPrimeiraCarta = classCartas.filter(
+            function(x){
+              return primeiraCarta.classList.contains(x)
+            })[0]
+        if(card.classList.contains(tipoPrimeiraCarta)){
+            primeiraCarta = null;
+            processandoClique = false;
+            paresEncontrados++
+            if(paresEncontrados==paresDisponiveis)
+            {
+              setTimeout(
+                  function(){
+                      alert(`Você ganhou em ${contadorDeCliques} jogadas!`)
+                    },1000
+                ) 
+            }
 
+        } else{
+          setTimeout(
+            function(){
+              card.classList.remove("virado")
+              primeiraCarta.classList.remove("virado")
+              primeiraCarta = null
+              processandoClique = false 
+            },
+            1000
+          );        
+        }    
+    }
     virarCarta(card)
 }
 
 function virarCarta(card){
-    //const carta = document.querySelector("");
     card.classList.add("virado");
-
 }
-
-alert("Você ganhou em X jogadas!")
 
 iniciarJogo()
